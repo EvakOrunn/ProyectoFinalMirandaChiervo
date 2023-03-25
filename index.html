@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Toastify -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="./style/styles.css">
+  <title>Entrega Final</title>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">Supermercado Marolio</a>
+
+    <nav class="navbar">
+      <a href="#inicio">Inicio</a>
+      <a href="#recetas">Recetas</a>
+      <a href="#productos" class="active">Productos</a>
+      <a href="./pages/nosotros.html">Historia</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="catalogo">
+    <h2>Nuestros Productos</h2>
+    <div id="card-container">
+    </div>
+  </section>
+
+  <section id="carrito">
+    <hr class="separador">
+    <h2 class="main-text">Carrito de Compras</h2>
+    <div id="shopping-cart">
+    </div>
+    <div class="total-container">
+      <p class="total">Total: <span id="total"></span></p>
+      <button class="action-btn" id="comprar">Comprar</button>
+      <button class="action-btn" id="vaciar">Vaciar Carrito</button>
+      <button class="action-btn" id="recuperar">Recuperar Carrito</button>
+      <button class="action-btn" id="pasar">Ver precio Dolar</button>
+    </div>
+    <hr class="separador-total">
+  </section>
+
+  <footer>
+    
+  </footer>
+  <script src="./index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
