@@ -292,12 +292,13 @@ pasar.addEventListener('click', () => {
     totalCompra += producto.precio * producto.cantidad;
   })
 
-  const referencia = "./JSON/divisa.json"
+  const referencia = "http://127.0.0.1:5000/precio_blue"
 
   fetch(referencia)
     .then(respuesta => respuesta.json())
     .then((datos) => {
-      conversionDolar(datos, totalCompra)
+      let datoParseado = parseFloat(datos);
+      conversionDolar(datoParseado, totalCompra);
     })
     .catch(error => {
       Swal.fire({
@@ -310,7 +311,7 @@ pasar.addEventListener('click', () => {
 })
 
 function conversionDolar(datos, total) {
-  let conversion = total / datos.compra;
+  let conversion = total / datos;
   let arreglo = conversion.toFixed(2);
   Swal.fire({
     title: 'Conversion',
